@@ -7,13 +7,12 @@ import { AuthGuardService } from '../_services/auth-guard.service'
   styleUrls: ['./account.component.css']
 })
 export class AccountComponent {
-  get loggedIn () {
-    return this.authGuardService.isLoggedIn;
-  };
+
   constructor(private authGuardService: AuthGuardService) {
 
   }
+
   toggleLoggedIn() {
-    this.authGuardService.isLoggedIn = !this.authGuardService.isLoggedIn
+    this.authGuardService.logout();
   }
 }

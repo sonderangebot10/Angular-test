@@ -11,12 +11,26 @@ export class AuthGuardService implements CanActivate {
     private router: Router
   ) {}
 
+  getStatus() {
+    if (localStorage.getItem('user') != null) {
+      return true;
+    }
+    else return false;
+  }
+
+  login() {
+    localStorage.setItem('currentUser', JSON.stringify('test'));
+  }
+
+  logout() {
+    localStorage.removeItem('currentUser');
+  }
+
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
-    if (this.isLoggedIn) {
+    if (localStorage.getItem('currentUser') != null) {
       return true;
     } else {
-      //alert('Please log in')
-      this.router.navigate(['login']);
+      this.router.navigate(['login'], {queryParams: {error: 'Please login to see content', returnUrl: state.url}});
       return false;
     }
   }
