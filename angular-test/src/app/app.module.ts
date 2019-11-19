@@ -12,7 +12,7 @@ import { ModifyComponent } from './modify/modify.component'
 import { AboutComponent } from './about/about.component'
 import { LoginComponent } from './login/login.component'
 
-import { AuthGuardService } from './auth-guard.service'
+import { AuthGuardService } from './_services/auth-guard.service'
 
 const appRoutes: Routes = [
   { path: 'account', component: AccountComponent, canActivate: [AuthGuardService]},
