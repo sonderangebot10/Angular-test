@@ -15,7 +15,8 @@
                     tickInterval="1"
                     min="0"
                     max="30"
-                    [ngStyle]="{'margin-bottom': '10px'}">
+                    [ngStyle]="{'margin-bottom': '10px'}"
+                    value={{device.data.temperature}}>
                 </mat-slider>
             </div>
             <div *ngIf="device.type == 'light'">
