@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./modify.component.css']
 })
 export class ModifyComponent {
-  
+  loading = true;
 }

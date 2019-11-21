@@ -1,0 +1,11 @@
+[
+  {  
+    "room": "Livingroom",
+    "devices": [{"name": "F500", "type": "heater", "data": {"temperature": "21"}},
+              {"name": "LED100", "type": "light", "data": {"state": false}}]
+  }, 
+  {
+    "room": "Bedroom",
+    "devices": [{"name": "LED150", "type": "light", "data": {"state": true}}]
+  }
+]
