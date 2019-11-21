@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSliderModule } from '@angular/material/slider';
 
 
 @Component({
@@ -46,6 +47,6 @@ class Device {
   constructor(
     name: string,
     type: string,
-    data: string
+    data: boolean
   ){}
 }

@@ -15,6 +15,9 @@ import { LoginComponent } from './login/login.component'
 
 import { AuthGuardService } from './_services/auth-guard.service'
 
+import {MatSliderModule} from '@angular/material/slider';
+import {MatButtonModule} from '@angular/material/button';
+
 const appRoutes: Routes = [
   { path: 'account', component: AccountComponent, canActivate: [AuthGuardService]},
   { path: '', component: DashboardComponent, canActivate: [AuthGuardService]},
@@ -38,7 +41,9 @@ const appRoutes: Routes = [
     ),
     BrowserModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatSliderModule,
+    MatButtonModule
   ],
   bootstrap: [AppComponent],
   providers: [ AuthGuardService]
