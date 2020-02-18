@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AuthGuardService } from './_services/auth-guard.service';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-roott',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

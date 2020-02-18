@@ -21,10 +21,12 @@ export class LoginComponent {
     private route: ActivatedRoute,
     private router: Router,
     private authGuardService: AuthGuardService) {
+      console.log(this.authGuardService.getStatus());
       if(this.authGuardService.getStatus()) {
         this.router.navigate(['/']);
       }
 
+      //to get the message 'please login to see 
       this.route.queryParams.subscribe(params => {
         this.error = params.error;
     });
